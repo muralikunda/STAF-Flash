@@ -125,14 +125,12 @@ public class Browser {
 	
 
 	public static void report(String s) throws IOException, InterruptedException{
-		Date d = new Date();
-		//System.out.println(d.toString());
+
 		
 		Calendar c = GregorianCalendar.getInstance();
 		String v = String.format("%1$tm%1$te%1$tY", c);
-		//System.out.println(v);
 		
-		Thread.sleep(100);
+		Thread.sleep(3000);
 		log.info(s);
 		File src=((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
 		String path="D:\\STAF\\Screens\\"+ConfigReader.getInstance().getTestCaseName()+"\\" +v+"\\"+i+"_"+s+".png";
