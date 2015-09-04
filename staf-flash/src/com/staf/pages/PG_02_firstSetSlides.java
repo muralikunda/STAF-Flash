@@ -39,13 +39,10 @@ public class PG_02_firstSetSlides extends Page {
 	}
 	
 	public void verifyImage(Pattern p, int i) throws FindFailed, IOException, InterruptedException{
-		System.out.println(p.getFilename());
-		String r = p.getFilename();
-		String s[]=r.split("\\");
-		String se[] = s[s.length].split(".");
-		System.out.println(se[0]);
+		String st = p.getFilename();
+		String fileName = st.substring(st.lastIndexOf("\\")+1, st.lastIndexOf("."));	
 		screen.wait(p,i);
-		Browser.report(" verified");
+		Browser.report(fileName+" image verified");
 		
 	}
 

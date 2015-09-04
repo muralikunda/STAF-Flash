@@ -135,7 +135,7 @@ public class Browser {
 		Thread.sleep(100);
 		log.info(s);
 		File src=((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
-		String path="D:\\STAF\\Screens\\"+ConfigReader.getInstance().getTestCaseName()+"\\" +i+"_"+v+"\\"+s+".png";
+		String path="D:\\STAF\\Screens\\"+ConfigReader.getInstance().getTestCaseName()+"\\" +v+"\\"+i+"_"+s+".png";
 		FileUtils.copyFile(src, new File(path));
 		Thread.sleep(100);
 		i=i+1;
